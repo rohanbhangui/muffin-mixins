@@ -1,0 +1,82 @@
+// 12 column grid system
+@import 'grid';
+
+// resets and base styles //
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 300;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+	text-align: center;
+	padding: 100px 0;
+}
+
+.demo {
+	max-width: 1200px;
+	margin: auto;
+}
+
+/* -------MIXINS------- */
+
+/* tinted background */
+
+@mixin tinted-image($color, $image, $color-opacity) {
+    background: -moz-linear-gradient(top, rgba($color, $color-opacity) 0%, rgba($color, $color-opacity) 100%), url($image);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($color, $color-opacity)), color-stop(100%,rgba($color, $color-opacity))), url($image);
+    background: -webkit-linear-gradient(top, rgba($color, $color-opacity) 0%,rgba($color, $color-opacity) 100%), url($image);
+    background: -o-linear-gradient(top, rgba($color, $color-opacity) 0%,rgba($color, $color-opacity) 100%), url($image);
+    background: -ms-linear-gradient(top, rgba($color, $color-opacity) 0%,rgba($color, $color-opacity) 100%), url($image);
+    background: linear-gradient(to bottom, rgba($color, $color-opacity) 0%,rgba($color, $color-opacity) 100%), url($image);
+}
+
+/* @font-face for local files */
+
+@mixin font-face-local($url, $font, $font-family, $font-weight, $font-style) {
+    font-family: $font-family;
+    src: url('#{$url}.eot');
+    src: url('#{$url}.eot?#iefix') format('embedded-opentype'),
+    url('#{$url}.woff') format('woff'),
+    url('#{$url}.ttf')  format('truetype'),
+    url('#{$url}.svg##{$font}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+
+/* -------------- */
+
+/* applied mixins (testing) */
+
+#tinted-background {
+	margin: auto;
+
+	&> div {
+		text-align: center;
+		color: #fff;
+		padding-top: 170px;
+		height: 200px;
+		width: 300px;
+		font-weight: 500;
+	}
+
+	#before {
+		background: url("/images/300x200.jpeg");
+	}
+
+	#after {
+		@include tinted-image(#ff0000, "/images/300x200.jpeg", 0.5);
+	}
+}
+
+
