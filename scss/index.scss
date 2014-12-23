@@ -28,9 +28,9 @@ h1 {
 	margin: auto;
 }
 
-/* -------MIXINS------- */
+// -------MIXINS-------
 
-/* tinted background */
+// tinted background
 
 @mixin tinted-image($color, $image, $color-opacity) {
     background: -moz-linear-gradient(top, rgba($color, $color-opacity) 0%, rgba($color, $color-opacity) 100%), url($image);
@@ -41,7 +41,7 @@ h1 {
     background: linear-gradient(to bottom, rgba($color, $color-opacity) 0%,rgba($color, $color-opacity) 100%), url($image);
 }
 
-/* @font-face for local files */
+// @font-face for local files
 
 @mixin font-face-local($url, $font, $font-family, $font-weight, $font-style) {
     font-family: $font-family;
@@ -53,6 +53,24 @@ h1 {
     font-weight: $font-weight;
     font-style: $font-style;
 }
+
+//transition
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transform($transform) {
+	-webkit-transform: $transformation;
+   	-moz-transform: $transformation;
+    -ms-transform: $transformation;
+    -o-transform: $transformation;
+    transform: $transformation;
+}
+
 
 /* -------------- */
 
@@ -76,6 +94,7 @@ h1 {
 
 	#after {
 		@include tinted-image(#ff0000, "/images/300x200.jpeg", 0.5);
+		@include font-face-local('/font/MontserratBold/MontserratBold','MontserratBold','Montserrat', normal, normal);
 	}
 }
 

@@ -2339,15 +2339,12 @@ h1 {
   max-width: 1200px;
   margin: auto; }
 
-/* -------MIXINS------- */
-/* tinted background */
-/* @font-face for local files */
 /* -------------- */
 /* applied mixins (testing) */
-/* line 61, ../scss/index.scss */
+/* line 79, ../scss/index.scss */
 #tinted-background {
   margin: auto; }
-  /* line 64, ../scss/index.scss */
+  /* line 82, ../scss/index.scss */
   #tinted-background > div {
     text-align: center;
     color: #fff;
@@ -2355,16 +2352,21 @@ h1 {
     height: 200px;
     width: 300px;
     font-weight: 500; }
-  /* line 73, ../scss/index.scss */
+  /* line 91, ../scss/index.scss */
   #tinted-background #before {
     background: url("/images/300x200.jpeg"); }
-  /* line 77, ../scss/index.scss */
+  /* line 95, ../scss/index.scss */
   #tinted-background #after {
     background: -moz-linear-gradient(top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url("/images/300x200.jpeg");
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 0, 0, 0.5)), color-stop(100%, rgba(255, 0, 0, 0.5))), url("/images/300x200.jpeg");
     background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url("/images/300x200.jpeg");
     background: -o-linear-gradient(top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url("/images/300x200.jpeg");
     background: -ms-linear-gradient(top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url("/images/300x200.jpeg");
-    background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url("/images/300x200.jpeg"); }
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url("/images/300x200.jpeg");
+    font-family: "Montserrat";
+    src: url("/font/MontserratBold/MontserratBold.eot");
+    src: url("/font/MontserratBold/MontserratBold.eot?#iefix") format("embedded-opentype"), url("/font/MontserratBold/MontserratBold.woff") format("woff"), url("/font/MontserratBold/MontserratBold.ttf") format("truetype"), url("/font/MontserratBold/MontserratBold.svg#MontserratBold") format("svg");
+    font-weight: normal;
+    font-style: normal; }
 
 /*# sourceMappingURL=index.css.map */
